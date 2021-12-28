@@ -1,6 +1,6 @@
 #include "SerialComLib.h"
 
-SerialCom::SerialCom(Stream &port, int rate, char term, int delay) {
+SerialCom::SerialCom(Stream &port, int rate, char term, int delay) : _port(port) {
 	port.begin(rate);
 	_port = port;
 	_term = term;
