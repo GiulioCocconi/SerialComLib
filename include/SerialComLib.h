@@ -6,11 +6,11 @@
 class SerialCom
 {
 	public:
-		SerialCom(HardwareSerial &port, int rate, char term, int delay);
+		SerialCom(HardwareSerial *port, int rate, char term, int delay);
 		String send(String msg);
 		String receive();
 	private:
-		HardwareSerial& _port;
+		HardwareSerial* _port;
 		char _term;
 		int _delay;
 };
