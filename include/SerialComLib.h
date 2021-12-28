@@ -6,7 +6,7 @@
 class SerialCom
 {
 	public:
-		SerialCom(Stream &port, int rate, char term, int delay);
+		SerialCom(Stream &port, int rate, char term, int delay) : _port(port);
 		String send(String msg);
 		String receive();
 	private:
