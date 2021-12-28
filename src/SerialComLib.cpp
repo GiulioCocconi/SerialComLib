@@ -1,6 +1,7 @@
 #include "SerialComLib.h"
 
-SerialCom::SerialCom(Stream &port, char term, int delay) {
+SerialCom::SerialCom(Stream &port, int rate, char term, int delay) {
+	port.begin(rate);
 	_port = port;
 	_term = term;
 	_delay = delay;
@@ -11,7 +12,7 @@ void SerialCom::begin(int rate) {
 }
 
 String SerialCom::send(String msg) {
-	delay(_del);
+	delay(_delay);
 	_port.print(msg + _term);
 	String debug = "Messaggio inviato: " + msg;
 	return debug;
