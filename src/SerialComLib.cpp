@@ -7,10 +7,6 @@ SerialCom::SerialCom(Stream &port, int rate, char term, int delay) {
 	_delay = delay;
 }
 
-void SerialCom::begin(int rate) {
-	_port.begin(rate);
-}
-
 String SerialCom::send(String msg) {
 	delay(_delay);
 	_port.print(msg + _term);
