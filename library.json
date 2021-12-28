@@ -1,13 +1,13 @@
 {
   "name": "serialComLib",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Libreria per la comunicazione seriale con Arduino",
   "keywords": "",
   "repository":
   {
     "type": "git",
     "url": "https://github.com/GiulioCocconi/serialComLib",
-"
+
   },
   "frameworks": ["arduino"],
   "platforms": "*"
