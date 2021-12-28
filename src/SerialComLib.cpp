@@ -1,6 +1,10 @@
 #include "SerialComLib.h"
 
-SerialCom::SerialCom(Stream &port, int rate, char term, int delay) : _port(port) {
+//TODO: Rendere libreria compatibile anche con softwareSerial:
+//	Usare oggetti di tipo Stream&
+//	Vedere https://stackoverflow.com/questions/48353981/arduino-calling-serial-begin-on-a-stream-object
+
+ SerialCom::SerialCom(HardwareSerial &port, int rate, char term, int delay) : _port(port) {
 	port.begin(rate);
 	_port = port;
 	_term = term;
